@@ -6,10 +6,11 @@ import lombok.*;
 @Getter
 @Setter
 @Builder
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class SaveDriverLocationRequestDto {
-    String driverId;
-    Double latitude;
-    Double longitude;
+    private String driverId;
+    private Double latitude;
+    private Double longitude;
 }

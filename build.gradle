@@ -21,7 +21,6 @@ configurations {
 
 repositories {
     mavenCentral()
-    mavenLocal()
 }
 
 dependencies {
@@ -32,9 +31,10 @@ dependencies {
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     // https://mvnrepository.com/artifact/redis.clients/jedis
-    implementation("redis.clients:jedis:6.0.0")
+    implementation("redis.clients:jedis:5.1.2")
+
+
 }
 
 tasks.named('test') {
