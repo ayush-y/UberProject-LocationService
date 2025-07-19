@@ -1,7 +1,4 @@
 package org.example.uberprojectlocationservice.controller;
-
-
-
 import org.example.uberprojectlocationservice.dto.DriverLocationDto;
 import org.example.uberprojectlocationservice.dto.NearbyDriversRequestDto;
 import org.example.uberprojectlocationservice.dto.SaveDriverLocationRequestDto;
@@ -39,7 +36,7 @@ public class LocationController {
     }
 
 
-    @GetMapping("/nearby/drivers")
+    @PostMapping("/nearby/drivers")
     public ResponseEntity<List<DriverLocationDto>> getNearbyDrivers(@RequestBody NearbyDriversRequestDto nearbyDriversRequestDto) {
         try {
             List<DriverLocationDto> drivers = locationService.getDriverLocations(nearbyDriversRequestDto.getLatitude(),
